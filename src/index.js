@@ -6,7 +6,7 @@ import Routes from './routes'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ''}>
       <Routes />
     </BrowserRouter>
   )
