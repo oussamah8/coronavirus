@@ -39,18 +39,18 @@ class Home extends Component {
                 </div>
                 <Map countries={this.state.countries} selectedCountry={this.updateSelectedCountry} />
                 <div className="infoCard">
-                    <div className="title">{ this.state.selectedCountry ? this.state.selectedCountry.country : "Worldwide"}</div>
+                    <div className="title">{this.state.selectedCountry ? this.state.selectedCountry.country : "Worldwide"}</div>
                     <div className="item cases">
-                        Cases : {this.state.selectedCountry.cases}
+                        Cases <br />{this.state.selectedCountry.cases}
                     </div>
                     <div className="item deaths">
-                        Deaths : {this.state.selectedCountry.deaths}
+                        Deaths <br />{this.state.selectedCountry.deaths}
                     </div>
                     <div className="item recovered">
-                        Recovered : {this.state.selectedCountry.recovered}
+                        Recovered <br />{this.state.selectedCountry.recovered}
                     </div>
                     <div className="item active">
-                        Active : {this.state.selectedCountry.active}
+                        Active <br />{this.state.selectedCountry.active}
                     </div>
                 </div>
             </div>

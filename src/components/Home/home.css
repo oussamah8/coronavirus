@@ -38,6 +38,8 @@ body {
     font-size: 38px;
     font-weight: 700;
     align-self: center;
+    text-align: center;
+    padding-top: 6px;
 }
 .infoCard {
     display: flex;
@@ -85,6 +87,12 @@ body {
 }
 .infoCard .item.active {
     background: #1076AD
+}
+
+@media screen and (max-width: 480px) {
+    .infoCard .item {
+        font-size: 9px;
+    }
 }
 
 
