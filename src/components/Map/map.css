@@ -2,13 +2,26 @@
     width: 24px!important;
     height:24px!important;
     border-radius: 50%;
-    background: #CC2222BB;
+    background: #151515;
     box-shadow: -1px 1px 4px 1px  #111111 ;
     font-size: 9px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cases {
+    background: #151515;
+}
+.deaths {
+    background: #B02037
+}
+.recovered {
+    background: #00A063;
+}
+.active {
+    background: #1076AD;
 }
 
 .myIcon:focus {
