@@ -10,7 +10,8 @@ class Home extends Component {
         markers: [[0, 0], [12, -10]],
         countries: [],
         selectedCountry: {},
-        filter: 'cases'
+        filter: 'cases',
+        theme: 'dark'
     }
 
     updateSelectedCountry = (country) => {
@@ -24,6 +25,12 @@ class Home extends Component {
     updateFilter = (filter) => {
         this.setState({
             filter
+        })
+    }
+
+    updateTheme = (theme) => {
+        this.setState({
+            theme
         })
     }
 
@@ -47,17 +54,21 @@ class Home extends Component {
                 <Map countries={this.state.countries} selectedCountry={this.updateSelectedCountry} myIcon={this.state.filter} />
                 <div className="infoCard">
                     <div className="title">{this.state.selectedCountry ? this.state.selectedCountry.country : "Worldwide"}</div>
-                    <div className="item cases" onClick={()=>{this.updateFilter('cases')}}>
+                    <div className="item cases" onClick={() => { this.updateFilter('cases') }}>
                         Cases <br />{this.state.selectedCountry.cases}
                     </div>
-                    <div className="item deaths" onClick={()=>{this.updateFilter('deaths')}}>
+                    <div className="item deaths" onClick={() => { this.updateFilter('deaths') }}>
                         Deaths <br />{this.state.selectedCountry.deaths}
                     </div>
-                    <div className="item recovered" onClick={()=>{this.updateFilter('recovered')}}>
+                    <div className="item recovered" onClick={() => { this.updateFilter('recovered') }}>
                         Recovered <br />{this.state.selectedCountry.recovered}
                     </div>
-                    <div className="item active" onClick={()=>{this.updateFilter('active')}}>
+                    <div className="item active" onClick={() => { this.updateFilter('active') }}>
                         Active <br />{this.state.selectedCountry.active}
+                    </div>
+                </div>
+                <div className="themeSwitcher">
+                    <div className={"button " + this.state.theme} onClick={() => this.state.theme === 'dark' ? this.updateTheme('light') : this.updateTheme('dark')}>
                     </div>
                 </div>
             </div>
