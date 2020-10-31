@@ -47,12 +47,12 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <div className="mapHeader">
+            <div className={"container "+ this.state.theme}>
+                <div className={"mapHeader " + this.state.theme}>
                     <span className="title">COVID-19 STATS MAP</span>
                 </div>
                 <Map countries={this.state.countries} selectedCountry={this.updateSelectedCountry} myIcon={this.state.filter} />
-                <div className="infoCard">
+                <div className={"infoCard " + this.state.theme}>
                     <div className="title">{this.state.selectedCountry ? this.state.selectedCountry.country : "Worldwide"}</div>
                     <div className="item cases" onClick={() => { this.updateFilter('cases') }}>
                         Cases <br />{this.state.selectedCountry.cases}
